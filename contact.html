@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact & Volunteer - Twin Cities Animal Rescue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Twin Cities Animal Rescue</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services & Programs</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact & Volunteer</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Get Involved & Contact Us</h2>
+    <p>Fill out the form below to inquire about volunteering, fostering, or adoption opportunities!</p>
+    
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>Volunteer or Foster Interest Form</legend>
+        <div>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="interest">Interest Type:</label>
+          <select id="interest" name="interest" required>
+            <option value="">--Please choose an option--</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="foster">Foster</option>
+            <option value="adoption">Adoption Information</option>
+          </select>
+        </div>
+        <div>
+          <label for="availability">Availability:</label>
+          <input type="text" id="availability" name="availability" placeholder="e.g., Weekends, Evenings">
+        </div>
+        <div>
+          <label for="experience">Experience with Pets:</label>
+          <textarea id="experience" name="experience" rows="3" placeholder="Briefly describe your pet experience..."></textarea>
+        </div>
+        <div>
+          <label for="message">Short Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Any questions or additional details..."></textarea>
+        </div>
+        <div>
+          <button type="submit">Submit Inquiry</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <section>
+      <h3>Office Hours</h3>
+      <p>Monday – Saturday: 10:00 AM – 6:00 PM<br>Sunday: Closed (Adoptions by appointment only)</p>
+    </section>
+    <section>
+      <h3>Service Area</h3>
+      <p>We proudly serve the greater Twin Cities metropolitan area and surrounding county regions.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Twin Cities Animal Rescue. All rights reserved.</p>
+  </footer>
+</body>
+</html>
