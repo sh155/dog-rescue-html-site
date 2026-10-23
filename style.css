@@ -1,0 +1,166 @@
+/* --- Global Styles & Variables --- */
+:root {
+  --primary: #00C896;       /* Mint green for buttons and accents */
+  --text-dark: #2D3142;     /* Charcoal for high contrast readable text */
+  --bg-light: #F9F9F9;      /* Warm off-white background */
+  --accent: #D88C5A;        /* Peach accent */
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #E5E5E5;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dark);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Mobile-first vertical stack */
+  gap: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* --- Main Content Layout --- */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+  color: var(--text-dark);
+}
+
+/* --- Media & Images --- */
+img, picture img, video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* --- Forms --- */
+form fieldset {
+  border: 2px solid #E5E5E5;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+form legend {
+  font-weight: bold;
+  color: var(--text-dark);
+  padding: 0 0.5rem;
+}
+
+form div {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+form button[type="submit"] {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #00b084;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--text-dark);
+  color: var(--white);
+  margin-top: 3rem;
+}
+
+/* --- Responsive Media Query for Larger Screens --- */
+@media (min-width: 800px) {
+  nav ul {
+    flex-direction: row; /* Switch navigation to horizontal row */
+    justify-content: space-between;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Multi-column grid layout for desktop */
+    gap: 2rem;
+  }
+
+  /* Make footer and main header span full width in grid layout */
+  header, footer {
+    grid-column: 1 / -1;
+  }
+}
